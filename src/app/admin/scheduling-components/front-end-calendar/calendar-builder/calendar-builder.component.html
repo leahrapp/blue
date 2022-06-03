@@ -1,0 +1,6 @@
+
+<div *ngIf="dateArr!=undefined && dateArr.length!=0">
+    <div *ngFor="let date of dateArr">
+<app-month-builder [date]="date" ></app-month-builder>
+</div>
+</div>

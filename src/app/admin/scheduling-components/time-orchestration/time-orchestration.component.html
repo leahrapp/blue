@@ -1,0 +1,16 @@
+
+<mat-grid-list cols="3">
+    <mat-grid-tile>
+        <mat-grid-tile-header>Start Time</mat-grid-tile-header>
+<app-time-input  [schedService]="startServe" [hasMeridium]="true"></app-time-input>
+</mat-grid-tile>
+<mat-grid-tile>
+    <mat-grid-tile-header>Appt Time</mat-grid-tile-header>
+    <app-time-input  [schedService]="apptServe" [hasMeridium]="false"></app-time-input>
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <mat-grid-tile-header>End Time</mat-grid-tile-header>
+    <app-time-input [schedService]="endServe" [hasMeridium]="true"></app-time-input>
+</mat-grid-tile>
+</mat-grid-list>

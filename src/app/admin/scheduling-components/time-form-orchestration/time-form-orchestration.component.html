@@ -1,0 +1,28 @@
+
+<mat-grid-list cols="3">
+    <mat-grid-tile>
+        <mat-grid-tile-header>Start Time</mat-grid-tile-header>
+<app-time-input-form  [schedService]="startServe" [hasMeridium]="true" [clock]="startClock"></app-time-input-form>
+</mat-grid-tile>
+<mat-grid-tile>
+    <mat-grid-tile-header>Appt Time</mat-grid-tile-header>
+    <app-time-input-form  [schedService]="apptServe" [hasMeridium]="false" [clock]="apptClock"></app-time-input-form>
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <mat-grid-tile-header>End Time</mat-grid-tile-header>
+    <app-time-input-form [schedService]="endServe" [hasMeridium]="true" [clock]="endClock"></app-time-input-form>
+</mat-grid-tile>
+</mat-grid-list>
+
+<div>
+    <button type="button" (click)="addHours()">
+
+        Add Some Shit
+
+    </button>
+</div>
+<div>
+
+    <app-day-schedule></app-day-schedule>
+</div>

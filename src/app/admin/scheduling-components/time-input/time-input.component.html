@@ -1,0 +1,36 @@
+
+           <form [formGroup]="apptForm">
+           <div class="time-block">
+                <mat-label>Hours</mat-label>
+                <div class="time-field">
+                    <input class="time-input" type="text" formControlName="timeHour"
+                        [value]="selectedHour" #newHour>
+
+                    <div class="time-icons">
+                        <mat-icon class="time-icon up-icon" (click)="hourRoll(newHour.value, 1)">
+                            keyboard_arrow_up</mat-icon>
+                        <mat-icon class="time-icon down-icon" (click)="hourRoll(newHour.value,0)">
+                            keyboard_arrow_down</mat-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="time-block">
+                <mat-label>Minutes</mat-label>
+                <div class="time-field">
+                    <input class="time-input" type="text" name="timeMinute" #newMinute 
+                        formControlName="timeMin">
+                    <div class="time-icons">
+                        <mat-icon class="time-icon up-icon" (click)="minuteRoll(newMinute.value,1)">
+                            keyboard_arrow_up</mat-icon>
+                        <mat-icon class="time-icon down-icon" (click)="minuteRoll(newMinute.value,0)">
+                            keyboard_arrow_down</mat-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="time-block" *ngIf="hasMeridium">
+                <select name="pets" id="pet-select" formControlName="meridiem">
+                    <option value=0 >AM</option>
+                    <option value=1>PM</option>
+                </select>
+            </div>
+        </form>

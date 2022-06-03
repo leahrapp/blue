@@ -1,0 +1,39 @@
+<div *ngIf="calendar">
+    <div class="sched-month" *ngFor="let month of months; let i = index">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-subtitle>{{month.year}}</mat-card-subtitle>
+                <mat-card-title>{{month.month}}</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+
+                <table>
+                    <tr>
+                        <th (click)="weekSelector(i, 0)">Sun</th>
+                        <th (click)="weekSelector(i, 1)">Mon</th>
+                        <th (click)="weekSelector(i, 2)">Tues</th>
+                        <th (click)="weekSelector(i, 3)">Wed</th>
+                        <th (click)="weekSelector(i, 4)">Thur</th>
+                        <th (click)="weekSelector(i,5)">Fri</th>
+                        <th (click)="weekSelector(i,6)">Sat</th>
+                    </tr>
+
+                    <ng-container *ngFor="let day of month.days; let j= index">
+
+                        <ng-container *ngIf="j==0 || j%7==0; else endRow">
+                            <tr>
+                             
+                        </ng-container>
+                 
+                        <td [ngClass]="getClass(day)" (click)="daySelector(i, j)">{{day.date}}</td>
+                 
+                      
+                   
+                    </ng-container>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <button type="button" (click)="clearDays()">Clear Selected</button>
+</div>

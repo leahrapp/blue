@@ -1,0 +1,31 @@
+
+
+
+<div class =  "day-schedule">
+
+<table>
+<tbody>
+  <ng-container *ngFor="let minutes of minutesInDay| fillArray"> 
+<tr [ngClass]="idk(minutes)">
+  
+
+    <td >
+      {{minutes|minuteToHour}}
+    </td>
+   
+</tr>
+</ng-container>
+
+</tbody>
+
+</table>
+
+
+
+
+
+
+
+
+
+</div>

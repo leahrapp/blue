@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>
+      
+        <mat-card-title>Select Dates</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+                <h4>Select date range</h4>
+                <div class="asdf" [formGroup]="dateRangeForm" (ngSubmit)="onSubmit()">
+                <mat-form-field>
+                    <mat-label>Start Date</mat-label>
+                 <input matInput [matDatepicker]="pickStart" formControlName="startDate" (dateInput)="updateStart( $event)" (dateChange)="updateStart( $event)" [min]="startDay" [max]="maxDate"> 
+                 <mat-datepicker-toggle matSuffix [for]="pickStart"></mat-datepicker-toggle>
+                 <mat-datepicker #pickStart></mat-datepicker>
+             </mat-form-field>
+           
+             <mat-form-field>   
+                 <mat-label>End Date</mat-label>
+                 <mat-label>Start Date</mat-label>
+                 <input matInput [matDatepicker]="pickEnd" formControlName="endDate" (dateInput)="updateEnd( $event)" (dateChange)="updateEnd( $event)" [min]="startDay" [max]="maxDate"> 
+                 <mat-datepicker-toggle matSuffix [for]="pickEnd"></mat-datepicker-toggle>
+                 <mat-datepicker #pickEnd></mat-datepicker>
+           
+             </mat-form-field>
+             </div>
+                <mat-button-toggle-group name="Days" aria-label="Days of the week" multiple>
+                    <mat-button-toggle value="Sunday" (click)="selectDays(0)">Sundays</mat-button-toggle>
+                    <mat-button-toggle value="Monday" (click)="selectDays(1)">Mondays</mat-button-toggle>
+                    <mat-button-toggle value="Tuesday" (click)="selectDays(2)">Tuesdays</mat-button-toggle>
+                    <mat-button-toggle value="Wednesday" (click)="selectDays(3)">Wednesday</mat-button-toggle>
+                    <mat-button-toggle value="Thursday" (click)="selectDays(4)">Thursday</mat-button-toggle>
+                    <mat-button-toggle value="Friday" (click)="selectDays(5)">Friday</mat-button-toggle>
+                    <mat-button-toggle value="Saturday" (click)="selectDays(6)">Saturday</mat-button-toggle>
+                </mat-button-toggle-group>
+
+   
+<app-front-end-calendar></app-front-end-calendar >
+<app-time-form-orchestration></app-time-form-orchestration>
+</mat-card-content>
+</mat-card>

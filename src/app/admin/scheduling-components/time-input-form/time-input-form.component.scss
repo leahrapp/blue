@@ -1,0 +1,65 @@
+
+
+
+.time-block{
+
+    display: inline-block;
+    margin: 20px;
+    }
+    
+    .time-field{
+        height: 40px;
+        position: relative;
+    
+    }
+    
+    .time-icons{
+        display: inline-block;
+        position: absolute;
+          bottom: 5px;
+    }
+    
+    
+    .down-icon{
+        display: block;
+    }
+    
+    
+    
+    .time-icon.mat-icon{
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+     
+        display: grid;
+         place-items: center;
+    }
+    .time-icon.mat-icon:hover{
+    
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+        background-color: darkgrey;
+        display: grid;
+        place-items: center;
+       
+    }
+    .time-input{
+    
+    width: 2em;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 5px 5px;
+    font-size: large;
+    text-align: right;
+    
+    }
+    
+    .appt-time{
+        display: inline;
+    }
+    
+    .hours:focus{
+        border: none;
+    }

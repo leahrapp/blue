@@ -1,0 +1,49 @@
+th{
+    cursor: pointer;
+}
+
+tr{
+    margin:0px; 
+}
+.inactive-day{
+    color: gray;
+   border: 1px solid black;
+}
+
+.inactive-day:hover{
+    cursor:not-allowed; 
+
+}
+
+.normal-day{
+    color: black;
+    border: 1px solid black;
+}
+
+.normal-day:hover, .holiday-day:hover, .holiday-day-selected:hover, .normal-day-selected:hover{
+    cursor:pointer;
+}
+.holiday-day
+{
+    color: red;
+    border: 1px solid black;
+}
+
+.holiday-day-selected
+{
+    background-color: pink;
+    border: 1px solid black;
+}
+.sched-month{
+    display: inline-block;
+    margin: 20px;
+}
+table{
+    display: inline;
+    border-spacing: 0px;
+}
+.normal-day-selected{
+    background-color: aqua;
+    border: 1px solid black;
+}
+

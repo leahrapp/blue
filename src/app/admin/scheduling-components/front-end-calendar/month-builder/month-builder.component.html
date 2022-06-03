@@ -1,0 +1,47 @@
+
+
+        <mat-card *ngIf="weeks!=undefined && weeks.length>0">
+            <mat-card-header>
+                <mat-card-subtitle>{{year}}</mat-card-subtitle>
+                <mat-card-title>{{month}}</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+
+                <table>
+                    <colgroup>
+                     
+                      <col  style="background-color: blue;">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr>
+                       
+                        <th (click)="weekSelector()">Sun</th>
+                        <th (click)="weekSelector()">Mon</th>
+                        <th (click)="weekSelector()">Tues</th>
+                        <th (click)="weekSelector()">Wed</th>
+                        <th (click)="weekSelector()">Thur</th>
+                        <th (click)="weekSelector()">Fri</th>
+                        <th (click)="weekSelector()">Sat</th>
+                   
+</tr>
+
+<ng-container *ngFor="let week of weeks;  index as i">
+<tr  >
+
+<app-week-builder [dateRange]="week" ></app-week-builder>
+</tr>
+</ng-container>
+
+
+
+
+</table>
+            </mat-card-content>
+        </mat-card>
+  
